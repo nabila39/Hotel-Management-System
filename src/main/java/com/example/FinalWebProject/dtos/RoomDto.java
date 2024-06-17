@@ -25,7 +25,7 @@ public class RoomDto {
 
     public static RoomDto roomToDto(Room room) {
         return RoomDto.builder()
-                .id(room.getId())
+                .id(room.getRoomId())
                 .roomNumber(room.getRoomNumber())
                 .details(room.getDetails())
                 .price(room.getPrice())

@@ -4,13 +4,15 @@ import jakarta.persistence.*;
 import lombok.Data;
 import java.util.List;
 
-@Data
 @Entity
+@Data
 @Table(name = "rooms")
 public class Room {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @Column(name = "room_id", nullable = false)
+    private Integer roomId;
 
     @Column(nullable = false)
     private String roomNumber;

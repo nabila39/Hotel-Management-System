@@ -1,17 +1,17 @@
 package com.example.FinalWebProject.controllers;
 
 
+import com.example.FinalWebProject.dtos.RegisterUserDto;
 import com.example.FinalWebProject.entities.User;
 import com.example.FinalWebProject.services.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RequestMapping("/users")
 @RestController
@@ -35,4 +35,14 @@ public class UserController {
         List<User> users = userService.allUsers();
         return ResponseEntity.ok(users);
     }
+    @PatchMapping("/update")
+    public RegisterUserDto UpdateUser(@RequestParam Integer id, @RequestBody Map<String, Object> User){
+        return userService.updateUser(id, User);
+    }
+    @PatchMapping("/updateUserPassword")
+    public ResponseEntity<String> updateUserPassword(@RequestParam Integer id, @RequestBody Map<String, Object> user) {
+        userService.updateUserPassword(id, user);
+        return ResponseEntity.ok("Password updated successfully");
+    }
+
 }

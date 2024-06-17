@@ -1,5 +1,11 @@
 package com.example.FinalWebProject.dtos;
 
+import com.example.FinalWebProject.entities.Room;
+import com.example.FinalWebProject.entities.User;
+import lombok.Builder;
+
+@Builder
+
 public class RegisterUserDto {
     private String email;
     private String password;
@@ -31,7 +37,13 @@ public class RegisterUserDto {
         this.fullName = fullName;
         return this;
     }
-
+    public static RegisterUserDto userToDto(User user) {
+        return RegisterUserDto.builder()
+                .email(user.getEmail())
+                .password(user.getPassword())
+                .fullName(user.getFullName())
+                .build();
+    }
     @Override
     public String toString() {
         return "RegisterUserDto{" +
