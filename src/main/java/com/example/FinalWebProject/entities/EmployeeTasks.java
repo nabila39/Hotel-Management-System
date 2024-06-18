@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.util.Date;
 
@@ -18,9 +19,9 @@ import java.util.Date;
 public class EmployeeTasks {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer taskId;
+    private Long taskId;
     @ManyToOne
-    @JoinColumn(name = "id", foreignKey = @ForeignKey(name = "id_fk"))
+    @JoinColumn(name = "id", foreignKey = @ForeignKey(name = "UserId"))
     private User user;
     @ManyToOne
     @JoinColumn(name = "employee_id", foreignKey = @ForeignKey(name = "employeeId"))
@@ -28,21 +29,24 @@ public class EmployeeTasks {
     @ManyToOne
     @JoinColumn(name = "roomId", foreignKey = @ForeignKey(name = "roomId"))
     private Room rooms;
+    @CreationTimestamp
     private Date taskDate;
     private String taskDescription;
-    private String status;
+
+    @Enumerated(EnumType.STRING) private TaskStatus status;
+
+    public enum TaskStatus { PENDING, IN_PROGRESS, COMPLETED, CANCELLED; }
 
     public static EmployeeTasks toEntity(EmployeeTasksDto dto) {
         EmployeeTasks employeeTasks = EmployeeTasks.builder()
-                .taskId(dto.getTaskId())
                 .taskDate(dto.getTaskDate())
                 .taskDescription(dto.getTaskDescription())
-                .status(dto.getStatus())
+                .status(dto.getStatus() != null ? TaskStatus.valueOf(dto.getStatus()) : null)
                 .build();
 
-        if (dto.getUserId() != null) {
+        if (dto.getId() != null) {
             User user1 = new User();
-            user1.setId(dto.getUserId());
+            user1.setId(dto.getId());
             employeeTasks.setUser(user1);
         }
 

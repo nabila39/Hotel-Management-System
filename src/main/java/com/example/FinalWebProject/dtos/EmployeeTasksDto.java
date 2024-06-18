@@ -14,8 +14,8 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class EmployeeTasksDto {
-    private Integer taskId;
-    private Integer userId;
+    private Long taskId;
+    private Integer id;
     private Integer employeeId;
     private Integer roomId;
     private Date taskDate;
@@ -25,12 +25,12 @@ public class EmployeeTasksDto {
     public static EmployeeTasksDto ToDto(EmployeeTasks employeeTasks){
         return EmployeeTasksDto.builder().
                 taskId(employeeTasks.getTaskId()).
-                userId(employeeTasks.getUser().getId()).
+                id(employeeTasks.getUser().getId()).
                 employeeId(employeeTasks.getEmployee().getEmployeeId()).
                 roomId(employeeTasks.getRooms().getRoomId()).
                 taskDate(employeeTasks.getTaskDate()).
                 taskDescription(employeeTasks.getTaskDescription()).
-                status(employeeTasks.getStatus()).
+                status(employeeTasks.getStatus().name()).
                 build();
 
     }
