@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.util.Date;
 
@@ -19,11 +20,18 @@ import java.util.Date;
 public class CheckInOut {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer CheckInOutid;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "reservationId", foreignKey = @ForeignKey(name = "reservationId_fk1"))
     private Reservations reservation;
+
+    @ManyToOne
+    @JoinColumn(name = "id", foreignKey = @ForeignKey(name = "AdminId"))
+    private User user;
+
+    @CreationTimestamp
+    private Date ProcessDate;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -35,13 +43,20 @@ public class CheckInOut {
 
     public static CheckInOut toEntity(CheckInOutDto checkInOutDto) {
         CheckInOut checkInOut = CheckInOut.builder().
-                id(checkInOutDto.getId())
+                CheckInOutid(checkInOutDto.getCheckid())
                 .process(CheckInOut.Process.valueOf(checkInOutDto.getProcess()))
+                .ProcessDate(checkInOutDto.getProcessDate())
+
                 .build();
         if (checkInOutDto.getReservationId() != null) {
             Reservations reservationObj = new Reservations();
             reservationObj.setReservationId(checkInOutDto.getReservationId());
             checkInOut.setReservation(reservationObj);
+        }
+        if (checkInOutDto.getAdminId() != null) {
+            User AdminObj = new User();
+            AdminObj.setId(checkInOutDto.getAdminId());
+            checkInOut.setUser(AdminObj);
         }
         return checkInOut;
     }

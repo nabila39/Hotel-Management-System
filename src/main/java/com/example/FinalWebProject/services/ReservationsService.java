@@ -14,7 +14,11 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+
 @Service
 public class ReservationsService {
     @Autowired
@@ -48,4 +52,41 @@ public class ReservationsService {
             }
 
     }
+    public ReservationDto updateReservation(Integer reservationId, ReservationDto updatedReservationDto) throws Exception {
+        Optional<Reservations> optionalReservation = reservationsRepository.findById(reservationId);
+
+        if (optionalReservation.isPresent()) {
+            Reservations existingReservation = optionalReservation.get();
+
+            existingReservation.setCheckInDate(updatedReservationDto.getCheckInDate());
+            existingReservation.setCheckOutDate(updatedReservationDto.getCheckOutDate());
+            Optional<Room> optionalRoom = roomRepository.findById(updatedReservationDto.getRoomId());
+            if (optionalRoom.isPresent()) {
+                existingReservation.setRooms(optionalRoom.get());
+            } else {
+                throw new Exception("Room not found for ID: " + updatedReservationDto.getRoomId());
+            }
+
+            Reservations updatedReservation = reservationsRepository.save(existingReservation);
+            return ReservationDto.ToDto(updatedReservation);
+        } else {
+            throw new Exception("Reservation not found for ID: " + reservationId);
+        }
+    }
+    public List<ReservationDto> findReservationsByUserId(Integer id) {
+        List<Reservations> reservations = reservationsRepository.findByUserId(id);
+        return reservations.stream().map(ReservationDto::ToDto).collect(Collectors.toList());
+    }
+
+    public List<ReservationDto> findReservationsByUserName(String userName) {
+        List<Reservations> reservations = reservationsRepository.findByUserName(userName);
+        return reservations.stream().map(ReservationDto::ToDto).collect(Collectors.toList());
+    }
+
+    public List<ReservationDto> findReservationsByReservationDate(String reservationDate) {
+        LocalDate date = LocalDate.parse(reservationDate);
+        List<Reservations> reservations = reservationsRepository.findByReservationDate(date);
+        return reservations.stream().map(ReservationDto::ToDto).collect(Collectors.toList());
+    }
+
 }

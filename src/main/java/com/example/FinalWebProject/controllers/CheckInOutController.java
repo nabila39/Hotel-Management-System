@@ -1,8 +1,6 @@
 package com.example.FinalWebProject.controllers;
 
-import com.example.FinalWebProject.dtos.CancellationRequestsDto;
 import com.example.FinalWebProject.dtos.CheckInOutDto;
-import com.example.FinalWebProject.services.CancellationRequestService;
 import com.example.FinalWebProject.services.CheckInOutService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,8 +13,16 @@ import org.springframework.web.bind.annotation.*;
 public class CheckInOutController {
     @Autowired
     private CheckInOutService checkInOutService;
-
-
+    @PostMapping("/checkIn")
+    public ResponseEntity<CheckInOutDto> checkIn(@RequestBody CheckInOutDto checkInOutDto) throws Exception {
+        CheckInOutDto add = checkInOutService.checkIn(checkInOutDto);
+        return new ResponseEntity<>(add, HttpStatus.CREATED);
+    }
+    @PostMapping("/checkOut")
+    public ResponseEntity<CheckInOutDto> checkOut(@RequestBody CheckInOutDto checkInOutDto) throws Exception {
+        CheckInOutDto add = checkInOutService.checkOut(checkInOutDto);
+        return new ResponseEntity<>(add, HttpStatus.CREATED);
+    }
 
     @PatchMapping("/updateProcess")
     public ResponseEntity<CheckInOutDto> updateProcess(@RequestParam Integer requestId, @RequestBody CheckInOutDto checkInOutDto) throws Exception {

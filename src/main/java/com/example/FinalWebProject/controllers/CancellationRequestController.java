@@ -23,10 +23,15 @@ public class CancellationRequestController {
         return new ResponseEntity<>(cancelled, HttpStatus.CREATED);
     }
 
-    @PatchMapping ("/update-status")
-    public ResponseEntity<CancellationRequestsDto> updateStatus(@RequestParam Integer requestId, @RequestBody CancellationRequestsDto cancellationRequestsDto) throws Exception {
-        CancellationRequestsDto updated = cancellationRequestService.updateStatus(requestId, cancellationRequestsDto);
-        return new ResponseEntity<>(updated, HttpStatus.OK);
+    @PatchMapping("/update-status")
+    public ResponseEntity<?> updateStatus(@RequestParam Integer requestId, @RequestBody CancellationRequestsDto cancellationRequestsDto) {
+        try {
+            ResponseEntity<?> updated = cancellationRequestService.updateStatus(requestId, cancellationRequestsDto);
+            return ResponseEntity.ok(updated.getBody());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+        }
     }
+
 
 }
