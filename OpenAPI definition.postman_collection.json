@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f16a4b3b-a275-41e4-a5bb-453870767723",
+		"_postman_id": "6746a439-ca2d-4a69-b381-9deffa19d692",
 		"name": "OpenAPI definition",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "34289974"
@@ -914,7 +914,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"anim_9\": {},\n  \"consequatc91\": {}\n}",
+									"raw": "{\n  \"enim_2f\": {}\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -957,7 +957,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"anim_9\": {},\n  \"consequatc91\": {}\n}",
+											"raw": "{\n  \"enim_2f\": {}\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -1290,78 +1290,6 @@
 			"name": "auth",
 			"item": [
 				{
-					"name": "signup",
-					"item": [
-						{
-							"name": "register",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"fullName\": \"<string>\"\n}",
-									"options": {
-										"raw": {
-											"headerFamily": "json",
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseUrl}}/auth/signup"
-							},
-							"response": [
-								{
-									"name": "OK",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											},
-											{
-												"key": "Accept",
-												"value": "*/*"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"fullName\": \"<string>\"\n}",
-											"options": {
-												"raw": {
-													"headerFamily": "json",
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{baseUrl}}/auth/signup"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "*/*"
-										}
-									],
-									"cookie": [],
-									"body": "{\n  \"id\": \"<integer>\",\n  \"fullName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"createdAt\": \"<dateTime>\",\n  \"updatedAt\": \"<dateTime>\",\n  \"role\": \"ADMIN\",\n  \"enabled\": \"<boolean>\",\n  \"accountNonLocked\": \"<boolean>\",\n  \"username\": \"<string>\",\n  \"authorities\": [\n    {\n      \"authority\": \"<string>\"\n    },\n    {\n      \"authority\": \"<string>\"\n    }\n  ],\n  \"credentialsNonExpired\": \"<boolean>\",\n  \"accountNonExpired\": \"<boolean>\"\n}"
-								}
-							]
-						}
-					]
-				},
-				{
 					"name": "login",
 					"item": [
 						{
@@ -1427,7 +1355,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"token\": \"<string>\",\n  \"expiresIn\": \"<long>\"\n}"
+									"body": "{\n  \"token\": \"<string>\",\n  \"expiresIn\": \"<long>\",\n  \"_links\": {\n    \"nostrud_1\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"essee_8\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"utdce\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
 								}
 							]
 						}
@@ -2012,7 +1940,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"anim_9\": {},\n  \"consequatc91\": {}\n}",
+									"raw": "{\n  \"enim_2f\": {}\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -2055,7 +1983,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"anim_9\": {},\n  \"consequatc91\": {}\n}",
+											"raw": "{\n  \"enim_2f\": {}\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -2091,7 +2019,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"fullName\": \"<string>\"\n}"
+									"body": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"fullName\": \"<string>\",\n  \"_links\": {\n    \"adipisicing_737\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
 								}
 							]
 						}
@@ -2116,7 +2044,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"anim_9\": {},\n  \"consequatc91\": {}\n}",
+									"raw": "{\n  \"enim_2f\": {}\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -2159,7 +2087,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"anim_9\": {},\n  \"consequatc91\": {}\n}",
+											"raw": "{\n  \"enim_2f\": {}\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -2242,7 +2170,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "{\n  \"id\": \"<integer>\",\n  \"fullName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"createdAt\": \"<dateTime>\",\n  \"updatedAt\": \"<dateTime>\",\n  \"role\": \"ADMIN\",\n  \"enabled\": \"<boolean>\",\n  \"accountNonLocked\": \"<boolean>\",\n  \"username\": \"<string>\",\n  \"authorities\": [\n    {\n      \"authority\": \"<string>\"\n    },\n    {\n      \"authority\": \"<string>\"\n    }\n  ],\n  \"credentialsNonExpired\": \"<boolean>\",\n  \"accountNonExpired\": \"<boolean>\"\n}"
+											"body": "{\n  \"id\": \"<integer>\",\n  \"fullName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"createdAt\": \"<dateTime>\",\n  \"updatedAt\": \"<dateTime>\",\n  \"role\": \"USER\",\n  \"enabled\": \"<boolean>\",\n  \"accountNonExpired\": \"<boolean>\",\n  \"credentialsNonExpired\": \"<boolean>\",\n  \"authorities\": [\n    {\n      \"authority\": \"<string>\"\n    },\n    {\n      \"authority\": \"<string>\"\n    }\n  ],\n  \"username\": \"<string>\",\n  \"accountNonLocked\": \"<boolean>\"\n}"
 										}
 									]
 								}
@@ -2291,7 +2219,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "{\n  \"anim_9\": {},\n  \"consequatc91\": {}\n}"
+											"body": "{\n  \"enim_2f\": {}\n}"
 										}
 									]
 								}
@@ -2340,7 +2268,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "{\n  \"anim_9\": {},\n  \"consequatc91\": {}\n}"
+											"body": "{\n  \"enim_2f\": {}\n}"
 										}
 									]
 								}
@@ -2386,7 +2314,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n  {\n    \"id\": \"<integer>\",\n    \"fullName\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"createdAt\": \"<dateTime>\",\n    \"updatedAt\": \"<dateTime>\",\n    \"role\": \"USER\",\n    \"enabled\": \"<boolean>\",\n    \"accountNonLocked\": \"<boolean>\",\n    \"username\": \"<string>\",\n    \"authorities\": [\n      {\n        \"authority\": \"<string>\"\n      },\n      {\n        \"authority\": \"<string>\"\n      }\n    ],\n    \"credentialsNonExpired\": \"<boolean>\",\n    \"accountNonExpired\": \"<boolean>\"\n  },\n  {\n    \"id\": \"<integer>\",\n    \"fullName\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"createdAt\": \"<dateTime>\",\n    \"updatedAt\": \"<dateTime>\",\n    \"role\": \"ADMIN\",\n    \"enabled\": \"<boolean>\",\n    \"accountNonLocked\": \"<boolean>\",\n    \"username\": \"<string>\",\n    \"authorities\": [\n      {\n        \"authority\": \"<string>\"\n      },\n      {\n        \"authority\": \"<string>\"\n      }\n    ],\n    \"credentialsNonExpired\": \"<boolean>\",\n    \"accountNonExpired\": \"<boolean>\"\n  }\n]"
+									"body": "[\n  {\n    \"id\": \"<integer>\",\n    \"fullName\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"createdAt\": \"<dateTime>\",\n    \"updatedAt\": \"<dateTime>\",\n    \"role\": \"USER\",\n    \"enabled\": \"<boolean>\",\n    \"accountNonExpired\": \"<boolean>\",\n    \"credentialsNonExpired\": \"<boolean>\",\n    \"authorities\": [\n      {\n        \"authority\": \"<string>\"\n      },\n      {\n        \"authority\": \"<string>\"\n      }\n    ],\n    \"username\": \"<string>\",\n    \"accountNonLocked\": \"<boolean>\"\n  },\n  {\n    \"id\": \"<integer>\",\n    \"fullName\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"createdAt\": \"<dateTime>\",\n    \"updatedAt\": \"<dateTime>\",\n    \"role\": \"ADMIN\",\n    \"enabled\": \"<boolean>\",\n    \"accountNonExpired\": \"<boolean>\",\n    \"credentialsNonExpired\": \"<boolean>\",\n    \"authorities\": [\n      {\n        \"authority\": \"<string>\"\n      },\n      {\n        \"authority\": \"<string>\"\n      }\n    ],\n    \"username\": \"<string>\",\n    \"accountNonLocked\": \"<boolean>\"\n  }\n]"
 								}
 							]
 						}
