@@ -1,9 +1,11 @@
 package com.example.FinalWebProject.controllers;
 
+import com.example.FinalWebProject.dtos.BillsDto;
 import com.example.FinalWebProject.dtos.EmployeeDto;
 import com.example.FinalWebProject.entities.Employee;
 import com.example.FinalWebProject.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -36,10 +38,11 @@ public class employeeController {
 
     @GetMapping("/allEmployee")
     @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<List<Employee>> allEmployee() {
-        List<Employee> employees = employeeService.allEmployee();
+    public ResponseEntity<List<EmployeeDto>> allEmployee() {
+        List<EmployeeDto> employees = employeeService.allEmployee();
         return ResponseEntity.ok(employees);
     }
+
 
     @PutMapping("/update")
     public EmployeeDto updateEmployee(@RequestParam Integer id, @RequestBody EmployeeDto employeeDto) throws Exception {

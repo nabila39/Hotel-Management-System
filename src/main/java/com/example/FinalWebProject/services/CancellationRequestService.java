@@ -29,12 +29,11 @@ public class CancellationRequestService {
         if (existingRequest.isPresent()) {
             throw new RuntimeException("You have already sent a request to cancel this reservation.");
         }
-
         cancellationRequestsDto.setAdminId(0);
+        cancellationRequestsDto.setRequestDate(new Date());
         if (String.valueOf(cancellationRequestsDto.getStatus()).equals("null")) {
             cancellationRequestsDto.setStatus("PENDING");
         }
-
         return CancellationRequestsDto.ToDto(cancellationRequestRepository.save(CancellationRequest.toEntity(cancellationRequestsDto)));
     }
 
