@@ -1,14 +1,18 @@
 package com.example.FinalWebProject.controllers;
 
 import com.example.FinalWebProject.dtos.LoginUserDto;
+import com.example.FinalWebProject.dtos.RegisterUserDto;
 import com.example.FinalWebProject.entities.User;
+import com.example.FinalWebProject.repositories.UserRepository;
 import com.example.FinalWebProject.responses.LoginResponse;
 import com.example.FinalWebProject.services.AuthenticationService;
 import com.example.FinalWebProject.services.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,5 +41,12 @@ public class AuthenticationController {
         loginResponse.add(roomsLink);
 
         return ResponseEntity.ok(loginResponse);
+    }
+
+    @PostMapping("/signup")
+    public ResponseEntity<User> register(@RequestBody RegisterUserDto registerUserDto) {
+        User registeredUser = authenticationService.signup(registerUserDto);
+
+        return ResponseEntity.ok(registeredUser);
     }
 }
