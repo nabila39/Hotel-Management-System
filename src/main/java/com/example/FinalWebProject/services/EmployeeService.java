@@ -1,5 +1,7 @@
 package com.example.FinalWebProject.services;
+import com.example.FinalWebProject.dtos.BillsDto;
 import com.example.FinalWebProject.dtos.EmployeeDto;
+import com.example.FinalWebProject.entities.Bills;
 import com.example.FinalWebProject.entities.Employee;
 import com.example.FinalWebProject.entities.User;
 import com.example.FinalWebProject.repositories.UserRepository;
@@ -32,11 +34,17 @@ public class EmployeeService {
             throw new Exception("User ID not found");
         }
     }
-    public List<Employee> allEmployee() {
-        List<Employee> employees = new ArrayList<>();
-        employeeRepository.findAll().forEach(employees::add);
-        return employees;
+
+
+    public List<EmployeeDto> allEmployee() {
+        List<Employee> bills = employeeRepository.findAll();
+        List<EmployeeDto> empolyeeDtoList = new ArrayList<>();
+        for (Employee employee : bills) {
+            empolyeeDtoList.add(EmployeeDto.ToDto(employee));
+        }
+        return empolyeeDtoList;
     }
+
     public EmployeeDto updateEmployee(Integer employeeId, EmployeeDto employeeDto) throws Exception {
         Optional<Employee> employeeOptional = employeeRepository.findById(employeeId);
         if (employeeOptional.isPresent()) {
