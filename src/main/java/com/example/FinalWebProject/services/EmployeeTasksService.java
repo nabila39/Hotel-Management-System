@@ -95,7 +95,6 @@ public class EmployeeTasksService {
             throw new Exception("Employee not found");
         }
     }
-
     public void deleteTask(Integer TaskId) throws Exception {
         if (employeeTaskRepository.existsById(TaskId)) {
             employeeTaskRepository.deleteById(TaskId);
