@@ -20,7 +20,7 @@ public class ReservationsController {
     @Autowired
     private ReservationsService reservationsService;
     @PostMapping("/newReservations")
-    @PreAuthorize("hasRole('USER')")
+
     public ResponseEntity<ReservationDto> addReservations(@RequestBody ReservationDto reservationDto) throws Exception {
         ReservationDto addedReservation = reservationsService.newReservations(reservationDto);
         return new ResponseEntity<>(addedReservation, HttpStatus.CREATED);
@@ -34,6 +34,7 @@ public class ReservationsController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
         }
     }
+
     @GetMapping("/byUserId")
     public List<ReservationDto> findReservationsByUserId(@RequestParam Integer userId) {
         return reservationsService.findReservationsByUserId(userId);

@@ -26,7 +26,7 @@ public class employeeController {
 
 
     @PostMapping("/addEmployee")
-    @PreAuthorize("hasRole('ADMIN')")
+
     public ResponseEntity<?> addEmployee(@RequestBody EmployeeDto employeeDto) {
         try {
             EmployeeDto savedEmployee = employeeService.addEmployee(employeeDto);
@@ -37,7 +37,7 @@ public class employeeController {
     }
 
     @GetMapping("/allEmployee")
-    @PreAuthorize("hasRole('ADMIN')")
+
     public ResponseEntity<List<EmployeeDto>> allEmployee() {
         List<EmployeeDto> employees = employeeService.allEmployee();
         return ResponseEntity.ok(employees);

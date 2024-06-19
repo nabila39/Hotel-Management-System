@@ -16,13 +16,13 @@ public class CancellationRequestController {
 
     @Autowired
     private CancellationRequestService cancellationRequestService;
-
+    @PreAuthorize("hasRole('USER')")
     @PostMapping("/cancel")
     public ResponseEntity<CancellationRequestsDto> cancel(@RequestBody CancellationRequestsDto cancellationRequestsDto) throws Exception {
         CancellationRequestsDto cancelled = cancellationRequestService.cancel(cancellationRequestsDto);
         return new ResponseEntity<>(cancelled, HttpStatus.CREATED);
     }
-
+    @PreAuthorize("hasRole('ADMIN')")
     @PatchMapping("/update-status")
     public ResponseEntity<?> updateStatus(@RequestParam Integer requestId, @RequestBody CancellationRequestsDto cancellationRequestsDto) {
         try {

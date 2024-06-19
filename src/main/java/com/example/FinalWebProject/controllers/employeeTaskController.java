@@ -21,12 +21,13 @@ public class employeeTaskController {
 
 
     @PostMapping("/addTask")
-    @PreAuthorize("hasRole('ADMIN')")
+
     public ResponseEntity<?> addTask(@RequestBody EmployeeTasksDto employeeTasksDto) throws Exception {
             EmployeeTasksDto savedTask = employeeTasksService.addTask(employeeTasksDto);
             return ResponseEntity.ok(savedTask);
 
     }
+
     @PatchMapping("/changeStatus")
     public ResponseEntity<String> changeStatus(@RequestParam Integer id, @RequestBody Map<String, Object> Task) {
         employeeTasksService.changeStatus(id, Task);

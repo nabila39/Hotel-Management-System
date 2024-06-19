@@ -38,6 +38,7 @@ public class SecurityConfiguration {
                         .requestMatchers("/auth/**").permitAll()
                         .requestMatchers("/users/getAll").hasAuthority("ROLE_ADMIN")
                         .requestMatchers("/Tasks/**").hasAuthority("ROLE_ADMIN")
+                        .requestMatchers("/employee/**").hasAuthority("ROLE_ADMIN")
                         .anyRequest().authenticated()
                 )
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
