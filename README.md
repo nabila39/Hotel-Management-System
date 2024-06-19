@@ -28,5 +28,7 @@ The Hotel Management System is designed to streamline operations for both hotel 
    git clone https://github.com/yourusername/project2-hotel-management-system.git
    cd project2-hotel-management-system
 2. **Build the Project**
+   ```bash
    ./mvnw clean install
 3. **./mvnw package**
+4. 
