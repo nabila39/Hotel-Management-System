@@ -1,0 +1,2404 @@
+{
+	"info": {
+		"_postman_id": "f16a4b3b-a275-41e4-a5bb-453870767723",
+		"name": "OpenAPI definition",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34289974"
+	},
+	"item": [
+		{
+			"name": "reservations",
+			"item": [
+				{
+					"name": "updateReservation",
+					"item": [
+						{
+							"name": "update Reservation",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"reservationId\": \"<integer>\",\n  \"id\": \"<integer>\",\n  \"roomId\": \"<integer>\",\n  \"reservationDate\": \"<dateTime>\",\n  \"checkInDate\": \"<dateTime>\",\n  \"checkOutDate\": \"<dateTime>\",\n  \"status\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/reservations/updateReservation?reservationId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reservations",
+										"updateReservation"
+									],
+									"query": [
+										{
+											"key": "reservationId",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"reservationId\": \"<integer>\",\n  \"id\": \"<integer>\",\n  \"roomId\": \"<integer>\",\n  \"reservationDate\": \"<dateTime>\",\n  \"checkInDate\": \"<dateTime>\",\n  \"checkOutDate\": \"<dateTime>\",\n  \"status\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/reservations/updateReservation?reservationId=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reservations",
+												"updateReservation"
+											],
+											"query": [
+												{
+													"key": "reservationId",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "newReservations",
+					"item": [
+						{
+							"name": "add Reservations",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"reservationId\": \"<integer>\",\n  \"id\": \"<integer>\",\n  \"roomId\": \"<integer>\",\n  \"reservationDate\": \"<dateTime>\",\n  \"checkInDate\": \"<dateTime>\",\n  \"checkOutDate\": \"<dateTime>\",\n  \"status\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/reservations/newReservations"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"reservationId\": \"<integer>\",\n  \"id\": \"<integer>\",\n  \"roomId\": \"<integer>\",\n  \"reservationDate\": \"<dateTime>\",\n  \"checkInDate\": \"<dateTime>\",\n  \"checkOutDate\": \"<dateTime>\",\n  \"status\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/reservations/newReservations"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"reservationId\": \"<integer>\",\n  \"id\": \"<integer>\",\n  \"roomId\": \"<integer>\",\n  \"reservationDate\": \"<dateTime>\",\n  \"checkInDate\": \"<dateTime>\",\n  \"checkOutDate\": \"<dateTime>\",\n  \"status\": \"<string>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "byUserName",
+					"item": [
+						{
+							"name": "find Reservations By User Name",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/reservations/byUserName?userName=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reservations",
+										"byUserName"
+									],
+									"query": [
+										{
+											"key": "userName",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reservations/byUserName?userName=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reservations",
+												"byUserName"
+											],
+											"query": [
+												{
+													"key": "userName",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"reservationId\": \"<integer>\",\n    \"id\": \"<integer>\",\n    \"roomId\": \"<integer>\",\n    \"reservationDate\": \"<dateTime>\",\n    \"checkInDate\": \"<dateTime>\",\n    \"checkOutDate\": \"<dateTime>\",\n    \"status\": \"<string>\"\n  },\n  {\n    \"reservationId\": \"<integer>\",\n    \"id\": \"<integer>\",\n    \"roomId\": \"<integer>\",\n    \"reservationDate\": \"<dateTime>\",\n    \"checkInDate\": \"<dateTime>\",\n    \"checkOutDate\": \"<dateTime>\",\n    \"status\": \"<string>\"\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "byUserId",
+					"item": [
+						{
+							"name": "find Reservations By User Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/reservations/byUserId?userId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reservations",
+										"byUserId"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reservations/byUserId?userId=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reservations",
+												"byUserId"
+											],
+											"query": [
+												{
+													"key": "userId",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"reservationId\": \"<integer>\",\n    \"id\": \"<integer>\",\n    \"roomId\": \"<integer>\",\n    \"reservationDate\": \"<dateTime>\",\n    \"checkInDate\": \"<dateTime>\",\n    \"checkOutDate\": \"<dateTime>\",\n    \"status\": \"<string>\"\n  },\n  {\n    \"reservationId\": \"<integer>\",\n    \"id\": \"<integer>\",\n    \"roomId\": \"<integer>\",\n    \"reservationDate\": \"<dateTime>\",\n    \"checkInDate\": \"<dateTime>\",\n    \"checkOutDate\": \"<dateTime>\",\n    \"status\": \"<string>\"\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "byDate",
+					"item": [
+						{
+							"name": "find Reservations By Reservation Date",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/reservations/byDate?reservationDate=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reservations",
+										"byDate"
+									],
+									"query": [
+										{
+											"key": "reservationDate",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/reservations/byDate?reservationDate=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"reservations",
+												"byDate"
+											],
+											"query": [
+												{
+													"key": "reservationDate",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"reservationId\": \"<integer>\",\n    \"id\": \"<integer>\",\n    \"roomId\": \"<integer>\",\n    \"reservationDate\": \"<dateTime>\",\n    \"checkInDate\": \"<dateTime>\",\n    \"checkOutDate\": \"<dateTime>\",\n    \"status\": \"<string>\"\n  },\n  {\n    \"reservationId\": \"<integer>\",\n    \"id\": \"<integer>\",\n    \"roomId\": \"<integer>\",\n    \"reservationDate\": \"<dateTime>\",\n    \"checkInDate\": \"<dateTime>\",\n    \"checkOutDate\": \"<dateTime>\",\n    \"status\": \"<string>\"\n  }\n]"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "update",
+					"item": [
+						{
+							"name": "update Employee",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"employeeId\": \"<integer>\",\n  \"id\": \"<integer>\",\n  \"fullName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phone\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/employee/update?id=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employee",
+										"update"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"employeeId\": \"<integer>\",\n  \"id\": \"<integer>\",\n  \"fullName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phone\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/employee/update?id=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employee",
+												"update"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"employeeId\": \"<integer>\",\n  \"id\": \"<integer>\",\n  \"fullName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phone\": \"<string>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "addEmployee",
+					"item": [
+						{
+							"name": "add Employee",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"employeeId\": \"<integer>\",\n  \"id\": \"<integer>\",\n  \"fullName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phone\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/employee/addEmployee"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"employeeId\": \"<integer>\",\n  \"id\": \"<integer>\",\n  \"fullName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"phone\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/employee/addEmployee"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "allEmployee",
+					"item": [
+						{
+							"name": "all Employee",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": "{{baseUrl}}/employee/allEmployee"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": "{{baseUrl}}/employee/allEmployee"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"employeeId\": \"<integer>\",\n    \"id\": \"<integer>\",\n    \"fullName\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phone\": \"<string>\"\n  },\n  {\n    \"employeeId\": \"<integer>\",\n    \"id\": \"<integer>\",\n    \"fullName\": \"<string>\",\n    \"email\": \"<string>\",\n    \"phone\": \"<string>\"\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"item": [
+						{
+							"name": "delete Employee",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/employee/delete?id=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employee",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/employee/delete?id=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employee",
+												"delete"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "updateTask",
+					"item": [
+						{
+							"name": "update Task",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"taskId\": \"<long>\",\n  \"id\": \"<integer>\",\n  \"employeeId\": \"<integer>\",\n  \"roomId\": \"<integer>\",\n  \"taskDate\": \"<dateTime>\",\n  \"taskDescription\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Tasks/updateTask?id=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Tasks",
+										"updateTask"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"taskId\": \"<long>\",\n  \"id\": \"<integer>\",\n  \"employeeId\": \"<integer>\",\n  \"roomId\": \"<integer>\",\n  \"taskDate\": \"<dateTime>\",\n  \"taskDescription\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Tasks/updateTask?id=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Tasks",
+												"updateTask"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"taskId\": \"<long>\",\n  \"id\": \"<integer>\",\n  \"employeeId\": \"<integer>\",\n  \"roomId\": \"<integer>\",\n  \"taskDate\": \"<dateTime>\",\n  \"taskDescription\": \"<string>\",\n  \"status\": \"<string>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "addTask",
+					"item": [
+						{
+							"name": "add Task",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"taskId\": \"<long>\",\n  \"id\": \"<integer>\",\n  \"employeeId\": \"<integer>\",\n  \"roomId\": \"<integer>\",\n  \"taskDate\": \"<dateTime>\",\n  \"taskDescription\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/Tasks/addTask"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"taskId\": \"<long>\",\n  \"id\": \"<integer>\",\n  \"employeeId\": \"<integer>\",\n  \"roomId\": \"<integer>\",\n  \"taskDate\": \"<dateTime>\",\n  \"taskDescription\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/Tasks/addTask"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "changeStatus",
+					"item": [
+						{
+							"name": "change Status",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"anim_9\": {},\n  \"consequatc91\": {}\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/Tasks/changeStatus?id=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Tasks",
+										"changeStatus"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"anim_9\": {},\n  \"consequatc91\": {}\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/Tasks/changeStatus?id=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Tasks",
+												"changeStatus"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "allTask",
+					"item": [
+						{
+							"name": "all Task",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": "{{baseUrl}}/Tasks/allTask"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": "{{baseUrl}}/Tasks/allTask"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"taskId\": \"<long>\",\n    \"id\": \"<integer>\",\n    \"employeeId\": \"<integer>\",\n    \"roomId\": \"<integer>\",\n    \"taskDate\": \"<dateTime>\",\n    \"taskDescription\": \"<string>\",\n    \"status\": \"<string>\"\n  },\n  {\n    \"taskId\": \"<long>\",\n    \"id\": \"<integer>\",\n    \"employeeId\": \"<integer>\",\n    \"roomId\": \"<integer>\",\n    \"taskDate\": \"<dateTime>\",\n    \"taskDescription\": \"<string>\",\n    \"status\": \"<string>\"\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "deleteTask",
+					"item": [
+						{
+							"name": "delete Task",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/Tasks/deleteTask?id=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Tasks",
+										"deleteTask"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/Tasks/deleteTask?id=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Tasks",
+												"deleteTask"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "rooms",
+			"item": [
+				{
+					"name": "add",
+					"item": [
+						{
+							"name": "add Room",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<integer>\",\n  \"roomNumber\": \"<string>\",\n  \"details\": \"<string>\",\n  \"price\": \"<double>\",\n  \"facilities\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"capacity\": \"<integer>\",\n  \"size\": \"<string>\",\n  \"features\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"available\": \"<boolean>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/rooms/add"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"<integer>\",\n  \"roomNumber\": \"<string>\",\n  \"details\": \"<string>\",\n  \"price\": \"<double>\",\n  \"facilities\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"capacity\": \"<integer>\",\n  \"size\": \"<string>\",\n  \"features\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"available\": \"<boolean>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/rooms/add"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<integer>\",\n  \"roomNumber\": \"<string>\",\n  \"details\": \"<string>\",\n  \"price\": \"<double>\",\n  \"facilities\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"capacity\": \"<integer>\",\n  \"size\": \"<string>\",\n  \"features\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"available\": \"<boolean>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "getAll",
+					"item": [
+						{
+							"name": "get All Rooms",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": "{{baseUrl}}/rooms/getAll"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": "{{baseUrl}}/rooms/getAll"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<integer>\",\n    \"roomNumber\": \"<string>\",\n    \"details\": \"<string>\",\n    \"price\": \"<double>\",\n    \"facilities\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"capacity\": \"<integer>\",\n    \"size\": \"<string>\",\n    \"features\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"available\": \"<boolean>\"\n  },\n  {\n    \"id\": \"<integer>\",\n    \"roomNumber\": \"<string>\",\n    \"details\": \"<string>\",\n    \"price\": \"<double>\",\n    \"facilities\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"capacity\": \"<integer>\",\n    \"size\": \"<string>\",\n    \"features\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"available\": \"<boolean>\"\n  }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "AllAvailableRooms",
+					"item": [
+						{
+							"name": "find All Available Rooms",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": "{{baseUrl}}/rooms/AllAvailableRooms"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": "{{baseUrl}}/rooms/AllAvailableRooms"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<integer>\",\n    \"roomNumber\": \"<string>\",\n    \"details\": \"<string>\",\n    \"price\": \"<double>\",\n    \"facilities\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"capacity\": \"<integer>\",\n    \"size\": \"<string>\",\n    \"features\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"available\": \"<boolean>\"\n  },\n  {\n    \"id\": \"<integer>\",\n    \"roomNumber\": \"<string>\",\n    \"details\": \"<string>\",\n    \"price\": \"<double>\",\n    \"facilities\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"capacity\": \"<integer>\",\n    \"size\": \"<string>\",\n    \"features\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"available\": \"<boolean>\"\n  }\n]"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"item": [
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"fullName\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/auth/signup"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"fullName\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/auth/signup"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<integer>\",\n  \"fullName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"createdAt\": \"<dateTime>\",\n  \"updatedAt\": \"<dateTime>\",\n  \"role\": \"ADMIN\",\n  \"enabled\": \"<boolean>\",\n  \"accountNonLocked\": \"<boolean>\",\n  \"username\": \"<string>\",\n  \"authorities\": [\n    {\n      \"authority\": \"<string>\"\n    },\n    {\n      \"authority\": \"<string>\"\n    }\n  ],\n  \"credentialsNonExpired\": \"<boolean>\",\n  \"accountNonExpired\": \"<boolean>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "login",
+					"item": [
+						{
+							"name": "authenticate",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/auth/login"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/auth/login"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"token\": \"<string>\",\n  \"expiresIn\": \"<long>\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "CheckInOut",
+			"item": [
+				{
+					"name": "checkOut",
+					"item": [
+						{
+							"name": "check Out",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"checkid\": \"<integer>\",\n  \"reservationId\": \"<integer>\",\n  \"process\": \"<string>\",\n  \"adminId\": \"<integer>\",\n  \"processDate\": \"<dateTime>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/CheckInOut/checkOut"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"checkid\": \"<integer>\",\n  \"reservationId\": \"<integer>\",\n  \"process\": \"<string>\",\n  \"adminId\": \"<integer>\",\n  \"processDate\": \"<dateTime>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/CheckInOut/checkOut"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"checkid\": \"<integer>\",\n  \"reservationId\": \"<integer>\",\n  \"process\": \"<string>\",\n  \"adminId\": \"<integer>\",\n  \"processDate\": \"<dateTime>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "checkIn",
+					"item": [
+						{
+							"name": "check In",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"checkid\": \"<integer>\",\n  \"reservationId\": \"<integer>\",\n  \"process\": \"<string>\",\n  \"adminId\": \"<integer>\",\n  \"processDate\": \"<dateTime>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/CheckInOut/checkIn"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"checkid\": \"<integer>\",\n  \"reservationId\": \"<integer>\",\n  \"process\": \"<string>\",\n  \"adminId\": \"<integer>\",\n  \"processDate\": \"<dateTime>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/CheckInOut/checkIn"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"checkid\": \"<integer>\",\n  \"reservationId\": \"<integer>\",\n  \"process\": \"<string>\",\n  \"adminId\": \"<integer>\",\n  \"processDate\": \"<dateTime>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "updateProcess",
+					"item": [
+						{
+							"name": "update Process",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"checkid\": \"<integer>\",\n  \"reservationId\": \"<integer>\",\n  \"process\": \"<string>\",\n  \"adminId\": \"<integer>\",\n  \"processDate\": \"<dateTime>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/CheckInOut/updateProcess?requestId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"CheckInOut",
+										"updateProcess"
+									],
+									"query": [
+										{
+											"key": "requestId",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"checkid\": \"<integer>\",\n  \"reservationId\": \"<integer>\",\n  \"process\": \"<string>\",\n  \"adminId\": \"<integer>\",\n  \"processDate\": \"<dateTime>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/CheckInOut/updateProcess?requestId=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"CheckInOut",
+												"updateProcess"
+											],
+											"query": [
+												{
+													"key": "requestId",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"checkid\": \"<integer>\",\n  \"reservationId\": \"<integer>\",\n  \"process\": \"<string>\",\n  \"adminId\": \"<integer>\",\n  \"processDate\": \"<dateTime>\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "CancellationRequest",
+			"item": [
+				{
+					"name": "cancel",
+					"item": [
+						{
+							"name": "cancel",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"requestId\": \"<integer>\",\n  \"reservationId\": \"<integer>\",\n  \"requestDate\": \"<dateTime>\",\n  \"status\": \"<string>\",\n  \"adminId\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/CancellationRequest/cancel"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"requestId\": \"<integer>\",\n  \"reservationId\": \"<integer>\",\n  \"requestDate\": \"<dateTime>\",\n  \"status\": \"<string>\",\n  \"adminId\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/CancellationRequest/cancel"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"requestId\": \"<integer>\",\n  \"reservationId\": \"<integer>\",\n  \"requestDate\": \"<dateTime>\",\n  \"status\": \"<string>\",\n  \"adminId\": \"<integer>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "update-status",
+					"item": [
+						{
+							"name": "update Status",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"requestId\": \"<integer>\",\n  \"reservationId\": \"<integer>\",\n  \"requestDate\": \"<dateTime>\",\n  \"status\": \"<string>\",\n  \"adminId\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/CancellationRequest/update-status?requestId=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"CancellationRequest",
+										"update-status"
+									],
+									"query": [
+										{
+											"key": "requestId",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"requestId\": \"<integer>\",\n  \"reservationId\": \"<integer>\",\n  \"requestDate\": \"<dateTime>\",\n  \"status\": \"<string>\",\n  \"adminId\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/CancellationRequest/update-status?requestId=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"CancellationRequest",
+												"update-status"
+											],
+											"query": [
+												{
+													"key": "requestId",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Bills",
+			"item": [
+				{
+					"name": "addBill",
+					"item": [
+						{
+							"name": "add Bill",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"billId\": \"<integer>\",\n  \"reservationId\": \"<integer>\",\n  \"amount\": \"<double>\",\n  \"issueDate\": \"<dateTime>\",\n  \"dueDate\": \"<dateTime>\",\n  \"status\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/Bills/addBill"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"billId\": \"<integer>\",\n  \"reservationId\": \"<integer>\",\n  \"amount\": \"<double>\",\n  \"issueDate\": \"<dateTime>\",\n  \"dueDate\": \"<dateTime>\",\n  \"status\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/Bills/addBill"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "getBills",
+					"item": [
+						{
+							"name": "get Bills",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": "{{baseUrl}}/Bills/getBills"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": "{{baseUrl}}/Bills/getBills"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"billId\": \"<integer>\",\n    \"reservationId\": \"<integer>\",\n    \"amount\": \"<double>\",\n    \"issueDate\": \"<dateTime>\",\n    \"dueDate\": \"<dateTime>\",\n    \"status\": \"<string>\"\n  },\n  {\n    \"billId\": \"<integer>\",\n    \"reservationId\": \"<integer>\",\n    \"amount\": \"<double>\",\n    \"issueDate\": \"<dateTime>\",\n    \"dueDate\": \"<dateTime>\",\n    \"status\": \"<string>\"\n  }\n]"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "update",
+					"item": [
+						{
+							"name": "Update User",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"anim_9\": {},\n  \"consequatc91\": {}\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users/update?id=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"update"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"anim_9\": {},\n  \"consequatc91\": {}\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/users/update?id=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												"update"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"fullName\": \"<string>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "updateUserPassword",
+					"item": [
+						{
+							"name": "update User Password",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"anim_9\": {},\n  \"consequatc91\": {}\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users/updateUserPassword?id=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"updateUserPassword"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"anim_9\": {},\n  \"consequatc91\": {}\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/users/updateUserPassword?id=<integer>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												"updateUserPassword"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "v3",
+					"item": [
+						{
+							"name": "view",
+							"item": [
+								{
+									"name": "authenticated User",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": "{{baseUrl}}/users/v3/view"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": "{{baseUrl}}/users/v3/view"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<integer>\",\n  \"fullName\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"createdAt\": \"<dateTime>\",\n  \"updatedAt\": \"<dateTime>\",\n  \"role\": \"ADMIN\",\n  \"enabled\": \"<boolean>\",\n  \"accountNonLocked\": \"<boolean>\",\n  \"username\": \"<string>\",\n  \"authorities\": [\n    {\n      \"authority\": \"<string>\"\n    },\n    {\n      \"authority\": \"<string>\"\n    }\n  ],\n  \"credentialsNonExpired\": \"<boolean>\",\n  \"accountNonExpired\": \"<boolean>\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "v2",
+					"item": [
+						{
+							"name": "view",
+							"item": [
+								{
+									"name": "view Role",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": "{{baseUrl}}/users/v2/view"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": "{{baseUrl}}/users/v2/view"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"anim_9\": {},\n  \"consequatc91\": {}\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "view",
+							"item": [
+								{
+									"name": "view ID And Name",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": "{{baseUrl}}/users/v1/view"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": "{{baseUrl}}/users/v1/view"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"anim_9\": {},\n  \"consequatc91\": {}\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "getAll",
+					"item": [
+						{
+							"name": "all Users",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": "{{baseUrl}}/users/getAll"
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": "{{baseUrl}}/users/getAll"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"id\": \"<integer>\",\n    \"fullName\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"createdAt\": \"<dateTime>\",\n    \"updatedAt\": \"<dateTime>\",\n    \"role\": \"USER\",\n    \"enabled\": \"<boolean>\",\n    \"accountNonLocked\": \"<boolean>\",\n    \"username\": \"<string>\",\n    \"authorities\": [\n      {\n        \"authority\": \"<string>\"\n      },\n      {\n        \"authority\": \"<string>\"\n      }\n    ],\n    \"credentialsNonExpired\": \"<boolean>\",\n    \"accountNonExpired\": \"<boolean>\"\n  },\n  {\n    \"id\": \"<integer>\",\n    \"fullName\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"createdAt\": \"<dateTime>\",\n    \"updatedAt\": \"<dateTime>\",\n    \"role\": \"ADMIN\",\n    \"enabled\": \"<boolean>\",\n    \"accountNonLocked\": \"<boolean>\",\n    \"username\": \"<string>\",\n    \"authorities\": [\n      {\n        \"authority\": \"<string>\"\n      },\n      {\n        \"authority\": \"<string>\"\n      }\n    ],\n    \"credentialsNonExpired\": \"<boolean>\",\n    \"accountNonExpired\": \"<boolean>\"\n  }\n]"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
