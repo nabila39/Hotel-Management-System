@@ -1,8 +1,9 @@
 package com.example.FinalWebProject.responses;
 
-public class LoginResponse {
-    private String token;
+import org.springframework.hateoas.RepresentationModel;
 
+public class LoginResponse extends RepresentationModel<LoginResponse> {
+    private String token;
     private long expiresIn;
 
     public String getToken() {

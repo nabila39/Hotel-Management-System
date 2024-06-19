@@ -1,12 +1,9 @@
 package com.example.FinalWebProject.dtos;
 
-import com.example.FinalWebProject.entities.Room;
 import com.example.FinalWebProject.entities.User;
-import lombok.Builder;
+import org.springframework.hateoas.RepresentationModel;
 
-@Builder
-
-public class RegisterUserDto {
+public class RegisterUserDto extends RepresentationModel<RegisterUserDto> {
     private String email;
     private String password;
     private String fullName;
@@ -15,35 +12,35 @@ public class RegisterUserDto {
         return email;
     }
 
-    public RegisterUserDto setEmail(String email) {
+    public void setEmail(String email) {
         this.email = email;
-        return this;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public RegisterUserDto setPassword(String password) {
+    public void setPassword(String password) {
         this.password = password;
-        return this;
     }
 
     public String getFullName() {
         return fullName;
     }
 
-    public RegisterUserDto setFullName(String fullName) {
+    public void setFullName(String fullName) {
         this.fullName = fullName;
-        return this;
     }
+
+    // Add a static method to create a DTO from a User entity
     public static RegisterUserDto userToDto(User user) {
-        return RegisterUserDto.builder()
-                .email(user.getEmail())
-                .password(user.getPassword())
-                .fullName(user.getFullName())
-                .build();
+        RegisterUserDto dto = new RegisterUserDto();
+        dto.setEmail(user.getEmail());
+        dto.setPassword(user.getPassword());
+        dto.setFullName(user.getFullName());
+        return dto;
     }
+
     @Override
     public String toString() {
         return "RegisterUserDto{" +

@@ -38,12 +38,14 @@ public class CancellationRequest {
     public enum RequestStatus {
         PENDING, APPROVED, DENIED
     }
+    @CreationTimestamp
+    private Date ProcessDate;
 
     public static CancellationRequest toEntity(CancellationRequestsDto dto) {
         CancellationRequest cancellationRequest = CancellationRequest.builder()
                 .requestId(dto.getReservationId())
                 .requestDate(dto.getRequestDate())
-                .status(CancellationRequest.RequestStatus.valueOf(dto.getStatus()))
+                .status(RequestStatus.valueOf(dto.getStatus()))
                 .build();
         if (dto.getReservationId() != null) {
             Reservations reservationsObj = new Reservations();
