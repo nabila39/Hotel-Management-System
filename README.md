@@ -18,6 +18,124 @@ The Hotel Management System is designed to streamline operations for both hotel 
 ## ER Diagram
 
 ![ER Diagram](/finalprojectERD.png)
+# Entities and Relationships
+
+## Entities
+
+### User
+**Attributes:**
+- user_id
+- email
+- created_at
+- updated_at
+- full_name
+- role
+- password
+
+### Reservation
+**Attributes:**
+- reservation_id
+- check_in_date
+- check_out_date
+- reservation_date
+- status_type
+- userid
+- roomid
+
+### Bill
+**Attributes:**
+- bill_id
+- issue_date
+- due_date
+- amount
+- reservationid
+
+### CancellationRequest
+**Attributes:**
+- request_id
+- request_date
+- status_type
+- reservationid
+- userid
+
+### Room
+**Attributes:**
+- room_id
+- room_number
+- size
+- price
+- capacity
+- availability
+
+### Employee
+**Attributes:**
+- employee_id
+- userid
+- fullname
+- position
+
+### Housekeeping
+**Attributes:**
+- task_id
+- task_date
+- task_description
+- status_type
+- roomid
+- employeeid
+- userid
+
+## Relationships
+
+### User - Reservation
+**Relation:** reserve  
+**Type:** 1 to N  
+**Description:** A user can make multiple reservations.
+
+### User - Bill
+**Relation:** bill out  
+**Type:** 1 to N  
+**Description:** A user can have multiple bills.
+
+### User - CancellationRequest
+**Relation:** requests  
+**Type:** 1 to N  
+**Description:** A user can make multiple cancellation requests.
+
+### User - Employee
+**Relation:** manage  
+**Type:** 1 to 1  
+**Description:** Each employee is managed by a user.
+
+### Reservation - Room
+**Relation:** reserves  
+**Type:** 1 to N  
+**Description:** A reservation is for a specific room.
+
+### Bill - Reservation
+**Relation:** bill out  
+**Type:** 1 to N  
+**Description:** Each bill is associated with a reservation.
+
+### CancellationRequest - Reservation
+**Relation:** requests  
+**Type:** 1 to 1  
+**Description:** Each cancellation request is for a specific reservation.
+
+### Employee - Housekeeping
+**Relation:** has tasks in  
+**Type:** 1 to N  
+**Description:** An employee is assigned multiple housekeeping tasks.
+
+### Room - Housekeeping
+**Relation:** has a  
+**Type:** 1 to N  
+**Description:** Housekeeping tasks are associated with specific rooms.
+
+### Employee - User
+**Relation:** manage  
+**Type:** 1 to N  
+**Description:** An employee can be managed by a user.
+
 
 ## How to Build, Package, and Run the Application
 
