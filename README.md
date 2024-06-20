@@ -17,7 +17,7 @@ The Hotel Management System is designed to streamline operations for both hotel 
 
 ## ER Diagram
 
-![ER Diagram](path/to/er-diagram.png)
+![ER Diagram](/finalprojectERD.png)
 
 ## How to Build, Package, and Run the Application
 
