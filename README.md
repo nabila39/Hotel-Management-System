@@ -188,5 +188,5 @@ Throughout this project, we have learned the following:
 
 ## Contributors
 
-- **Student 1**: [GitHub](https://github.com/student1)
-- **Student 2**: [GitHub](https://github.com/student2)
+- **Student 1**: [GitHub](https://github.com/nabila39)
+- **Student 2**: [GitHub](https://github.com/AysarSalameh)
