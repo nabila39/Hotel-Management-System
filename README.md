@@ -74,7 +74,7 @@ The Hotel Management System is designed to streamline operations for both hotel 
 - fullname
 - position
 
-### Housekeeping
+### EmployeeTasks
 **Attributes:**
 - task_id
 - task_date
